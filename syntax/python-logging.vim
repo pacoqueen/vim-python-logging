@@ -7,8 +7,12 @@
 " 2015-02-13 10:46:48.550 6608 WARNING heat.common.keystoneclient [-] message
 " ^---------------------^ ^--^ ^-----^ ^------------------------------------^
 "          date           pid   label                message
+" Actual sample:
+" 2015-02-13 10:46:48,550 WARNING : heat.common.keystoneclient [-] message
+" ^---------------------^ ^-----^   ^------------------------------------^
+"          date            label                message
 
-syntax match PythonLoggingDate /^\d\{4}-\d\d-\d\d \d\d:\d\d:\d\d\(\.\d\+\)\?/
+syntax match PythonLoggingDate /^\d\{4}-\d\d-\d\d \d\d:\d\d:\d\d\(,\d\+\)\?/
 syntax match PythonLoggingPid /\%(^\S\+\s\S\+\s\)\@<=\S\+/
 syntax match PythonLoggingLblDebug /\%(^\(\S\+\s\)\{3}\)\@<=DEBUG\s/
 syntax match PythonLoggingLblInfo /\%(^\(\S\+\s\)\{3}\)\@<=INFO\s/
